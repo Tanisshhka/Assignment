@@ -1,4 +1,4 @@
-/*const isPrime = require('./isprime');
+const isPrime = require('./isprime');
 
 const numbers = [2, 10, 17, 21];
 
@@ -23,10 +23,10 @@ console.log('\n--- Appending Data ---');
 appendFileData();
 
 console.log('\n--- Reading Updated File Content ---');
-readFileData(); */
+readFileData(); 
 
 
-// index.js for ques 04 , to run boxel comment the upside code
+// index.js for ques 04 , to run boxel comment the upside code using [*/ start --- /*end]
 
 const boxen = require('boxen');
 
@@ -60,4 +60,32 @@ const roundBox = boxen(message, {
 console.log(classicBox);
 console.log(singleDoubleBox);
 console.log(roundBox);
+
+// index.js for Ques 05 
+
+const randomWords = require('random-words');
+const { checkPalindrome, countVowels } = require('./fun');
+
+const words = randomWords(5); // Generate 5 random words
+
+words.forEach((word, index) => {
+  const isPalin = checkPalindrome(word);
+  const vowelCount = countVowels(word);
+
+  console.log(`word ${index + 1} -> ${word} -> vowelsCount: ${vowelCount} -> isPalindrome: ${isPalin}`);
+});
+
+// index.js for Ques 06
+const sum = require('./sum');
+const multiply = require('./multiply');
+const divide = require('./divide');
+const subtract = require('./subtract');
+
+const a = 10;
+const b = 5;
+
+console.log(`Sum: ${sum(a, b)}`);
+console.log(`Multiply: ${multiply(a, b)}`);
+console.log(`Divide: ${divide(a, b)}`);
+console.log(`Subtract: ${subtract(a, b)}`);
 
