@@ -14,7 +14,7 @@ console.log(`Factorial of 7 is: ${factorial(7)}`);
 console.log(`Factorial of 10 is: ${factorial(10)}`);
 
 // index.js for Ques 03
-const { readFileData, appendFileData } = require('./fileOperations');
+const { readFileData, appendFileData } = require('./fileOperation');
 
 console.log('--- Reading Original File Content ---');
 readFileData();
@@ -76,7 +76,7 @@ words.forEach((word, index) => {
 });
 
 // index.js for Ques 06
-const sum = require('./sum');
+const sum = require('./add');
 const multiply = require('./multiply');
 const divide = require('./divide');
 const subtract = require('./subtract');
@@ -88,4 +88,28 @@ console.log(`Sum: ${sum(a, b)}`);
 console.log(`Multiply: ${multiply(a, b)}`);
 console.log(`Divide: ${divide(a, b)}`);
 console.log(`Subtract: ${subtract(a, b)}`);
+
+
+
+// index.js for Ques 07
+  
+const chalk = require('chalk');
+
+console.log(chalk.blue('Hello, World!'));
+console.log(chalk.yellow('Learning Chalk is fun!'));
+
+console.log(chalk.bgYellow.black('Warning! Proceed with caution.'));
+console.log(chalk.bgRed.white('Error! Something went wrong.'));
+
+console.log(chalk.green('Success:') + ' ' + chalk.white('Operation completed!'));
+console.log(chalk.cyan('Loading...') + ' ' + chalk.magenta('Please wait'));
+
+const error = chalk.bold.red;
+const warning = chalk.bold.hex('#FFA500');
+const success = chalk.bold.green;
+
+console.log(error('Error: Unable to connect to the server!'));
+console.log(warning('Warning: Low disk space!'));
+console.log(success('Success: Data saved successfully!'));
+
 
